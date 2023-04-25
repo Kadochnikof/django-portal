@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'instructions.apps.InstructionsConfig',
+    'employees.apps.EmployeesConfig',
+    'questions.apps.QuestionsConfig'
 ]
 
 MIDDLEWARE = [
@@ -80,10 +82,10 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'portal_db',
+        'USER': 'myuser',
+        'PASSWORD': '12345',
         'HOST': 'localhost',
         'PORT': 5432,
     }
@@ -112,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 

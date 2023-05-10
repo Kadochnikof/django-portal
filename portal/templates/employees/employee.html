@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}{{employee.employee_fullname}} {% endblock  %}
+
+{% block content %}
+
+    <h1>{{ employee.employee_fullname }}</h1> 
+    <p>{{ employee.get_employee_position_display }}</p>
+    <p>Дата рождения: {{ employee.employee_birthdate }}</p>
+        
+    <h4><a href="/">Переход на главную страницу</a></h4><br>
+
+{% endblock  %}

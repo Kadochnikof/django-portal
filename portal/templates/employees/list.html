@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Список сотрудников {% endblock  %}
+
+{% block content %}
+<h1><a href="/">Главная страница</a></h1><br>
+
+    {% if employees %}
+        <ol>
+        {% for employee in employees %}
+
+            <li><a style = "font-size: 24px;" href="
+                {% url 'employees:detail' employee.id %}
+                ">{{employee.employee_fullname}}</a> <br></li>
+            
+        {% endfor %}
+        </ol>
+    {% endif %}
+
+{% endblock  %}

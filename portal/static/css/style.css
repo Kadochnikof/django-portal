@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Fira+Sans:wght@700&display=swap");
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  line-height: 1.83;
+  color: #071838;
+  text-size-adjust: none;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #3c50e0;
+}
+
+.layout {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  margin: 1rem auto 2rem;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: calc((1320px - 110px) / 12 * 10 + 90px + 2rem);
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+}
+
+h2:not(:first-child) {
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+}
+
+p {
+  margin: 0 0 1.5rem;
+}
+
+code {
+  background-color: rgba(203, 204, 207, 0.4);
+  border-radius: 2px;
+  font-family: "Fira Code", sans-serif;
+  padding: 0 3px;
+  white-space: pre;
+  font-size: 10px;
+  margin: 0 0 1.5rem;
+}
+
+code span {
+  white-space: pre;
+}
+
+ol,
+ul {
+  padding: 0 0 0 2.5rem;
+  margin: 0 0 1.5rem;
+}
+
+li {
+  margin: 0 0 1rem;
+}
+
+blockquote {
+  padding: 10px 50px 10px 10px;
+  border-left: 3px solid #cbcccf;
+  background: rgba(203, 204, 207, 0.15);
+  margin: 0 0 1.5rem;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 0 0 1.5rem;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+}
+
+pre {
+  background: rgba(203, 204, 207, 0.4);
+  border-radius: 4px;
+  font-family: "IBM Plex Mono", monospace;
+  margin: 0 0 1.5rem;
+}
+
+pre:not(.parser__highlight) {
+  white-space: pre-wrap;
+  padding: 10px 15px;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+pre.parser__highlight {
+  padding: 10px 15px 5px;
+}
+
+pre.parser__highlight code {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.const__size {
+  width: 200px;
+  height: 200px;
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid rgb(203, 204, 207);
+  border-right: 0;
+  border-bottom: 0;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(60, 80, 224, 0.05);
+}
+
+td,
+th {
+  padding: 5px;
+  border: 1px solid rgb(203, 204, 207);
+  border-top: 0;
+  border-left: 0;
+}
+
+th {
+  font-weight: 600;
+}
+
+.callout {
+  padding: 16px 16px 16px 12px;
+  border-radius: 3px;
+  background: rgb(241, 241, 239);
+  margin: 0 0 1.5rem;
+  border-left: 0;
+  position: relative;
+}
+
+.callout p {
+  margin-left: 2rem;
+}
+
+.callout::after {
+  content: "💡";
+  position: absolute;
+  top: 1rem;
+}
+
+.callout__icon {
+  margin-right: 0.5rem;
+}
+
+hr {
+  color: rgba(203, 204, 207, 0.4);
+  background-color: rgba(203, 204, 207, 0.4);
+  border: 0px none;
+  height: 1px;
+  clear: both;
+}
+
+.codehilite {
+  margin: 0 0 1.5rem;
+}
+
+.codehilite pre code {
+  overflow: auto;
+  display: inherit;
+  padding: 1rem;
+}
+
+.not-found {
+  display: grid;
+  gap: 2rem;
+}
+
+.not-found div {
+  align-self: center;
+  justify-self: center;
+  padding: 2rem;
+}
+
+@media (min-width: 641px) {
+  html {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  .content {
+    margin: 2rem auto 3rem;
+  }
+
+  code {
+    font-size: 12px;
+  }
+
+  .not-found {
+    grid-template-columns: auto calc(70% - 2rem);
+  }
+
+  .not-found div {
+    justify-self: end;
+  }
+}
+
+@media (min-width: 961px) {
+  .content {
+    margin: 3rem auto;
+  }
+
+  code {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1281px) {
+  html {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+}
+
+h2:last-child,
+h3:last-child,
+p:last-child,
+blockquote:last-child,
+pre:last-child,
+ol:last-child,
+ul:last-child,
+li:last-child,
+code:last-child,
+.callout:last-child {
+  margin-bottom: 0;
+}

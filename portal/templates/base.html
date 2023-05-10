@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %} главная страница {% endblock %}</title>
+        <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    {% block content %}
+    
+<h1>Корпоративный портал</h1>
+<h2>Разработчик - Кадочников А.С.</h2>
+    
+<a href="/employee">Сотрудники</a><br>
+<a href="/instruction">Инструкции</a><br>
+<a href="/question">Ответы на часто задаваемые вопросы</a>
+
+    {% endblock %}
+</html>

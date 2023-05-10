@@ -9,7 +9,7 @@ class Question(models.Model):
         ('MK', 'Маркетинг')
     ]
     question_main = models.CharField('Формулировка вопроса', max_length=200)
-    question_answer = models.TextField('Ответ', max_length=200)
+    question_answer = models.TextField('Ответ', max_length=1000)
     question_theme = models.TextField('Тема', max_length=2,
         choices=themes,
         default='FI',

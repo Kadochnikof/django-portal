@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Инструкции {% endblock  %}
+
+{% block content %}
+<h1><a href="/">Главная страница</a></h1><br>
+
+    {% if instructions %}
+        <ol>
+        {% for instruction in instructions %}
+
+            <li><a style = "font-size: 24px;" href="
+                {% url 'instructions:detail' instruction.id %}
+                ">{{instruction.instruction_name}}</a> <br></li>
+            
+        {% endfor %}
+        </ol>
+    {% endif %}
+
+{% endblock  %}

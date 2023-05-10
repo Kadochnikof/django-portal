@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}{{question.question_main}} {% endblock  %}
+
+{% block content %}
+
+    <h1>{{ question.question_main }}</h1> 
+    <p>Тема: {{ question.get_question_theme_display}}</p>
+    <p>{{ question.question_answer}}</p>
+    
+        
+    <h4><a href="/">Переход на главную страницу</a></h4><br>
+
+{% endblock  %}

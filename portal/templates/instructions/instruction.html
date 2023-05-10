@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}{{instruction.instruction_name}} {% endblock  %}
+
+{% block content %}
+
+    <h1>{{ instruction.instruction_name }}</h1> 
+    <p>{{ instruction.instruction_author}}</p>
+    <p><i>Опубликовано: {{ instruction.instruction_date}}</i></p>
+    <p>{{ instruction.instruction_url}}</p>
+        
+    <h4><a href="/">Переход на главную страницу</a></h4><br>
+
+{% endblock  %}
